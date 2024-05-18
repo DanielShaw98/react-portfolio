@@ -7,7 +7,7 @@ import githubWhite from '../../assets/github-white.svg';
 import linkedinBlack from '../../assets/linkedin-black.svg';
 import linkedinWhite from '../../assets/linkedin-white.svg';
 import CV from '../../assets/cv.pdf';
-import { useTheme } from '../../common/ThemeContext';
+import useTheme from '../../common/useTheme';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
