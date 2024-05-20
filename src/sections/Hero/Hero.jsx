@@ -1,4 +1,5 @@
 import styles from './HeroStyles.module.css';
+import { ReactTyped } from "react-typed";
 import heroImg from '../../assets/hero-img.png';
 import sun from '../../assets/sun-black.svg';
 import moon from '../../assets/moon-white.svg';
@@ -27,15 +28,26 @@ function Hero() {
           <br />
           Shaw
         </h1>
-        <h2>Full Stack Developer</h2>
-        <span>
+        <h2>{" "}
+          <ReactTyped
+            strings={["Full Stack Developer", "Software Engineer", "Web Developer"]}
+            typeSpeed={80}
+            backSpeed={50}
+            loop
+            backDelay={1500}
+            startDelay={500}
+            cursorChar=">"
+            showCursor={true}
+          />
+        </h2>
+        <div>
           <a href="https://github.com/DanielShaw98" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
           <a href="https://www.linkedin.com/in/daniel-shaw-ds98/" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
-        </span>
+        </div>
         <p className={styles.description}>With a passion for both frontend and backend development.</p>
         <a href={CV} download>
           <button className="hover">CV</button>
