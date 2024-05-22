@@ -9,6 +9,7 @@
 
   .hero {
     max-width: 300px;
+    margin-top: 80px;
   }
 
   div {
@@ -35,7 +36,7 @@
     color: var(--btn-text-color);
     border: none;
     border-radius: 20px;
-    width: 80px;
+    width: 180px;
     height: 50px;
     font-size: 20px;
     font-weight: 500;
@@ -56,16 +57,41 @@
 
 .colorModeContainer {
   position: relative;
+  animation: slideInRight 1s ease-out;
+}
+
+.colorModeWrapper {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  margin-top: 20px;
 }
 
 .colorMode {
-  position: absolute;
-  right: 0;
   width: 40px;
 }
 
 .colorMode:hover {
   cursor: pointer;
+}
+
+.colorModeMessage {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.colorModeMessage::after {
+  content: var(--arrow-icon);
+  color: var(--text-color);
+  position: absolute;
+  rotate: -20deg;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -35px;
 }
 
 .description {
@@ -78,6 +104,61 @@
   flex-direction: column;
   gap: 20px;
   width: 350px;
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeftSmall {
+  from {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightSmall {
+  from {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (width < 800px) {
+  .colorModeContainer {
+    animation: slideInRightSmall 1s ease-out;
+  }
+
+  .info {
+    animation: slideInLeftSmall 1s ease-out;
+  }
 }
 
 @media (width >= 800px) {

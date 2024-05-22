@@ -20,7 +20,10 @@ function Hero() {
     <section id ="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
         <img className={styles.hero} src={heroImg} alt="Avatar profile picture" />
-        <img className={styles.colorMode} src={themeIcon} alt="Color mode icon" onClick={toggleTheme} />
+        <div className={styles.colorModeWrapper}>
+          <img className={styles.colorMode} src={themeIcon} alt="Color mode icon" onClick={toggleTheme} />
+          <p className={styles.colorModeMessage}>Try out light and dark mode</p>
+        </div>
       </div>
       <div className={styles.info}>
         <h1>
@@ -50,7 +53,7 @@ function Hero() {
         </div>
         <p className={styles.description}>With a passion for both frontend and backend development.</p>
         <a href={CV} download>
-          <button className="hover">CV</button>
+          <button className="hover">Download CV</button>
         </a>
       </div>
     </section>

@@ -6,6 +6,7 @@
   --text-color: #0E1111;
   --form-text-color: #555555;
   --footer-text-color: #888888;
+  --arrow-icon: url('../src/assets/arrow-black.svg');
 }
 
 [data-theme='dark'] {
@@ -16,6 +17,7 @@
   --text-color: #F9F9F9;
   --form-text-color: #F9F9F9;
   --footer-text-color: #BBBBBB;
+  --arrow-icon: url('../src/assets/arrow-white.svg');
 }
 
 body {
