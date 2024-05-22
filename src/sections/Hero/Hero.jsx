@@ -7,7 +7,7 @@ import githubBlack from '../../assets/github-black.svg';
 import githubWhite from '../../assets/github-white.svg';
 import linkedinBlack from '../../assets/linkedin-black.svg';
 import linkedinWhite from '../../assets/linkedin-white.svg';
-import CV from '../../assets/cv.pdf';
+import CV from '../../assets/Daniel Shaw - Full Stack CV 2024.pdf';
 import useTheme from '../../common/useTheme';
 
 function Hero() {
