@@ -1,5 +1,3 @@
-
-
 function SkillList({src, skill}) {
   return (
     <span>
