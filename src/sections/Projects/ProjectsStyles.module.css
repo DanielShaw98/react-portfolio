@@ -13,7 +13,8 @@
   }
 
   a {
-    width: fit-content;
+    width: 100%;
+    max-width: 350px;
     text-decoration: none;
     color: #222;
     transition: transform 400ms ease-in-out;
