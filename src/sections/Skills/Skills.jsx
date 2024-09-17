@@ -36,7 +36,7 @@ function Skills() {
         justifyContent: "center",
         flexDirection: "column",
         overflow: "visible",
-        margin: "0px 60px",
+        margin: "0px 200px",
       }}>
         <h4 className="skillTitle">Languages</h4>
         <div className={styles.skillList}>

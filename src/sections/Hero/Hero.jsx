@@ -9,6 +9,7 @@ import linkedinBlack from '../../assets/linkedin-black.svg';
 import linkedinWhite from '../../assets/linkedin-white.svg';
 import CV from '../../assets/Daniel Shaw - Full Stack CV 2024.pdf';
 import useTheme from '../../common/useTheme';
+import TopNav from '../../common/TopNav';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
@@ -18,6 +19,7 @@ function Hero() {
 
   return (
     <section id ="hero" className={styles.container}>
+      <TopNav />
       <div className={styles.colorModeContainer}>
         <img className={styles.hero} src={heroImg} alt="Avatar profile picture" />
         <div className={styles.colorModeWrapper}>

@@ -1,11 +1,11 @@
-import React from 'react'
-import './AnimatedTitle.css'
+import React from 'react';
+import styles from './styling/AnimatedTitle.module.css';
 
 function ProjectCard({ src, link, h3, p, hasAnimation }) {
   return (
     <a href={link} target="_blank">
       {hasAnimation ? (
-        <div className="animatedTitle hover">
+        <div className={styles.animatedTitle}>
           <h1>{h3}</h1>
         </div>
       ) : (
