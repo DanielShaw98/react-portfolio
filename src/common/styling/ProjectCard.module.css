@@ -1,0 +1,86 @@
+@keyframes textGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+.animatedTitle {
+  max-width: 250px;
+  align-self: center;
+  background-color: var(--project-card-bg);
+  border-radius: 20px;
+  padding: 128px 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.animatedTitle h1 {
+  font-size: 60px;
+  font-family: "Unbounded", sans-serif;
+  background: linear-gradient(90deg, #17181D, #FF4A01, #FF4A01, #FF4A01, #17181D);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradient 5s ease infinite;
+  text-transform: none;
+}
+
+.card {
+  perspective: 1000px; /* Enable 3D effect */
+  width: 100%;
+  height: 350px;
+  /* margin: 50px 0px; */
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card:hover .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.cardBack {
+  max-width: 350px;
+  max-height: 330px;
+  align-self: center;
+  background-color: var(--project-card-bg);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.cardBack p {
+  font-size: 18px;
+  text-align: left;
+}
+
+.cardText {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cardText h3, .cardText p {
+  margin: 5px 0;
+}

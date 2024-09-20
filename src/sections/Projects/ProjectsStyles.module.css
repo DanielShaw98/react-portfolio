@@ -21,10 +21,6 @@
     transition: transform 400ms ease-in-out;
   }
 
-  a:hover {
-    transform: scale(1.05);
-  }
-
   h3 {
     margin-top: 10px;
   }
@@ -34,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 140px 0px;
 }
 
 @media (width >= 800px) {
@@ -43,5 +39,6 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0 30px;
+    gap: 160px 0px;
   }
 }
