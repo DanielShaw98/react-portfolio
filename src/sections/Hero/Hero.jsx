@@ -7,6 +7,7 @@ import githubBlack from '../../assets/github-black.svg';
 import githubWhite from '../../assets/github-white.svg';
 import linkedinBlack from '../../assets/linkedin-black.svg';
 import linkedinWhite from '../../assets/linkedin-white.svg';
+import world from '../../assets/world-icon.svg';
 import CV from '../../assets/Daniel Shaw - Full Stack CV 2024.pdf';
 import useTheme from '../../common/useTheme';
 import TopNav from '../../common/TopNav';
@@ -24,14 +25,20 @@ function Hero() {
         <img className={styles.hero} src={heroImg} alt="Avatar profile picture" />
         <div className={styles.colorModeWrapper}>
           <img className={styles.colorMode} src={themeIcon} alt="Color mode icon" onClick={toggleTheme} />
-          <p className={styles.colorModeMessage}>Try out light and dark mode</p>
+          <p className={`${styles.colorModeMessage} ${styles.hide}`}>Try out light and dark mode</p>
+        </div>
+        <div className={styles.gameWrapper}>
+          <a href="https://higherorlower.world/" target="_blank">
+            <img className={styles.worldIcon} src={world} alt="World game icon" />
+          </a>
+          <p className={`${styles.gameWrapperMessage} ${styles.hide}`}>Check out my higher or lower game</p>
         </div>
       </div>
       <div className={styles.info}>
         <h1>
           Daniel
-          <br />
-          Shaw
+          <br className={styles.hide} />
+          <span className={styles.addSpace}>Shaw</span>
         </h1>
         <h2>{" "}
           <ReactTyped
@@ -46,15 +53,15 @@ function Hero() {
           />
         </h2>
         <div>
-          <a href="https://github.com/DanielShaw98" target="_blank">
+          <a className={styles.socials} href="https://github.com/DanielShaw98" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://www.linkedin.com/in/daniel-shaw-ds98/" target="_blank">
+          <a className={styles.socials} href="https://www.linkedin.com/in/daniel-shaw-ds98/" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </div>
         <p className={styles.description}>With a passion for both frontend and backend development.</p>
-        <a href={CV} download>
+        <a className={styles.download} href={CV} download>
           <button className="hover">Download CV</button>
         </a>
       </div>
