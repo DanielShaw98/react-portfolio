@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    margin: 10px;
+    padding: 10px;
   }
 
   img {
@@ -27,6 +27,7 @@
   row-gap: 40px;
   max-width: 40ch;
   padding: 20px 0px;
+  margin: 0px 80px;
 }
 
 h4 {
@@ -45,9 +46,5 @@ h4 {
     p {
       font-size: 20px;
     }
-  }
-
-  hr {
-    width: 300px;
   }
 }

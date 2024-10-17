@@ -11,112 +11,65 @@ import railsIcon from '../../assets/rails-icon.svg';
 import stimulusjsIcon from '../../assets/stimulus.js-icon.svg';
 import reactIcon from '../../assets/react-icon.svg';
 import nodejsIcon from '../../assets/nodejs-icon.svg';
-import nextjsIcon from '../../assets/next.js-icon.svg';
+import nextjsIconDark from '../../assets/next.js-icon-dark.svg';
+import nextjsIconLight from '../../assets/next.js-icon-light.svg';
 import tailwindcssIcon from '../../assets/tailwindcss-icon.svg';
 import githubIcon from '../../assets/github-icon.svg';
 import gitIcon from '../../assets/git-icon.svg';
 import herokuIcon from '../../assets/heroku-icon.svg';
-import vercelIcon from '../../assets/vercel-icon.svg';
+import vercelIconDark from '../../assets/vercel-icon-dark.svg';
+import vercelIconLight from '../../assets/vercel-icon-light.svg';
 import postmanIcon from '../../assets/postman-icon.svg';
-import openaiIcon from '../../assets/openai-icon.svg';
+import openaiIconDark from '../../assets/openai-icon-dark.svg';
+import openaiIconLight from '../../assets/openai-icon-light.svg';
 import postgresqlIcon from '../../assets/postgresql-icon.svg';
 import figmaIcon from '../../assets/figma-icon.svg';
 import viteIcon from '../../assets/vite-icon.svg';
 import bootstrapIcon from '../../assets/bootstrap-icon.svg';
-import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+import useTheme from '../../common/useTheme';
+import 'animate.css';
 
 function Skills() {
+  const { theme } = useTheme();
+  const nextjsIcon = theme === 'light' ? nextjsIconDark : nextjsIconLight;
+  const vercelIcon = theme === 'light' ? vercelIconDark : vercelIconLight;
+  const openaiIcon = theme === 'light' ? openaiIconDark : openaiIconLight;
+
   return (
     <section id="skills" className={styles.container}>
       <h1 className="sectionTitle">Skills</h1>
-      <MouseParallaxContainer
-      resetOnLeave
-      containerStyle={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        overflow: "visible",
-        margin: "0px 200px",
-      }}>
         <h4 className="skillTitle">Languages</h4>
         <div className={styles.skillList}>
-          <MouseParallaxChild factorX={0.04} factorY={0.04}>
-            <SkillList src={htmlIcon} skill="HTML"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.06} factorY={0.06}>
-            <SkillList src={scssIcon} skill="SCSS"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.08} factorY={0.08}>
-            <SkillList src={rubyIcon} skill="Ruby"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.1} factorY={0.1}>
-            <SkillList src={javascriptIcon} skill="Javascript"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.08} factorY={0.08}>
-            <SkillList src={typescriptIcon} skill="Typescript"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.06} factorY={0.06}>
-            <SkillList src={pythonIcon} skill="Python"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.04} factorY={0.04}>
-            <SkillList src={sqlIcon} skill="SQL"/>
-          </MouseParallaxChild>
+          <SkillList src={htmlIcon} skill="HTML"/>
+          <SkillList src={scssIcon} skill="SCSS"/>
+          <SkillList src={rubyIcon} skill="Ruby"/>
+          <SkillList src={javascriptIcon} skill="Javascript"/>
+          <SkillList src={typescriptIcon} skill="Typescript"/>
+          <SkillList src={pythonIcon} skill="Python"/>
+          <SkillList src={sqlIcon} skill="SQL"/>
         </div>
         <h4 className="skillTitle">Frameworks/Libraries</h4>
         <div className={styles.skillList}>
-          <MouseParallaxChild factorX={0.06} factorY={0.06}>
-            <SkillList src={railsIcon} skill="Rails"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.08} factorY={0.08}>
-            <SkillList src={stimulusjsIcon} skill="Stimulus.js"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.1} factorY={0.1}>
-            <SkillList src={reactIcon} skill="React"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.12} factorY={0.12}>
-            <SkillList src={nodejsIcon} skill="Node.js"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.08} factorY={0.08}>
-            <SkillList src={nextjsIcon} skill="Next.js"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.06} factorY={0.06}>
-            <SkillList src={tailwindcssIcon} skill="Tailwind CSS"/>
-          </MouseParallaxChild>
+          <SkillList src={railsIcon} skill="Rails"/>
+          <SkillList src={stimulusjsIcon} skill="Stimulus.js"/>
+          <SkillList src={reactIcon} skill="React"/>
+          <SkillList src={nodejsIcon} skill="Node.js"/>
+          <SkillList src={nextjsIcon} skill="Next.js"/>
+          <SkillList src={tailwindcssIcon} skill="Tailwind CSS"/>
         </div>
         <h4 className="skillTitle">Tools</h4>
         <div className={styles.skillList}>
-          <MouseParallaxChild factorX={0.04} factorY={0.04}>
-            <SkillList src={githubIcon} skill="Github"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.04} factorY={0.04}>
-            <SkillList src={gitIcon} skill="Git"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.06} factorY={0.06}>
-            <SkillList src={herokuIcon} skill="Heroku"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.08} factorY={0.08}>
-            <SkillList src={vercelIcon} skill="Vercel"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.1} factorY={0.1}>
-            <SkillList src={postmanIcon} skill="Postman"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.1} factorY={0.1}>
-            <SkillList src={openaiIcon} skill="Open AI"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.08} factorY={0.08}>
-            <SkillList src={postgresqlIcon} skill="PostgreSQL"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.06} factorY={0.06}>
-            <SkillList src={figmaIcon} skill="Figma"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.04} factorY={0.04}>
-            <SkillList src={viteIcon} skill="Vite"/>
-          </MouseParallaxChild>
-          <MouseParallaxChild factorX={0.04} factorY={0.04}>
-            <SkillList src={bootstrapIcon} skill="Bootstrap"/>
-          </MouseParallaxChild>
+          <SkillList src={githubIcon} skill="Github"/>
+          <SkillList src={gitIcon} skill="Git"/>
+          <SkillList src={herokuIcon} skill="Heroku"/>
+          <SkillList src={vercelIcon} skill="Vercel"/>
+          <SkillList src={postmanIcon} skill="Postman"/>
+          <SkillList src={openaiIcon} skill="Open AI"/>
+          <SkillList src={postgresqlIcon} skill="PostgreSQL"/>
+          <SkillList src={figmaIcon} skill="Figma"/>
+          <SkillList src={viteIcon} skill="Vite"/>
+          <SkillList src={bootstrapIcon} skill="Bootstrap"/>
         </div>
-      </MouseParallaxContainer>
     </section>
   );
 }
